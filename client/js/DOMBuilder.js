@@ -1,7 +1,7 @@
 const { currencyFormatter } = require('./util')
 
 /**
- * DOMBuilder class handles DOM element creation for product list
+ * DOMBuilder class handles DOM element creation for product list on client-side
  */
 class DOMBuilder {
   /**
