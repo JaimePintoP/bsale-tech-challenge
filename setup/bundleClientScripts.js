@@ -3,7 +3,8 @@
 
 const fs = require('fs')
 const browserify = require('browserify')
-const watchify = require('watchify')
+const watchify =
+  process.env.NODE_ENV === 'development' ? require('watchify') : undefined
 const b = browserify({
   entries: ['client/js/index.js'],
   cache: {},
