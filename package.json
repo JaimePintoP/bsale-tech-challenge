@@ -13,7 +13,7 @@
     "dev:watchsass": "chokidar 'client/scss/**/*.scss' -c 'npm run dev:buildsass'",
     "dev": "NODE_ENV=development npm-run-all --parallel dev:*",
     "heroku-postbuild": "npm run dev:bundlejs && npm run dev:buildsass",
-    "start": "NODE_ENV=production && node index.js"
+    "start": "node index.js"
   },
   "author": "Adrian Parry",
   "license": "ISC",

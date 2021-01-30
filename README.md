@@ -23,4 +23,4 @@ Tech challenge for bsale application.
   npm start
   ```
 
-  which compiles client-side JS and SASS files and starts server on $PORT
+  which does a simple `node index.js`
