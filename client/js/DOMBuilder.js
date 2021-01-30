@@ -3,21 +3,31 @@ const { currencyFormatter } = require('./util')
 class DOMBuilder {
   constructor(container) {
     this.container = container
+    this.products = []
+  }
+
+  setProducts(products) {
+    this.products = products
+  }
+
+  getProducts() {
+    return this.products
   }
 
   clear() {
     this.container.innerHTML = ''
+    return this
   }
 
   noProductsFound() {
     this.container.append('No products found!')
   }
 
-  buildList(products) {
-    if (!products.length) {
+  buildList() {
+    if (!this.products.length) {
       return this.noProductsFound()
     }
-    products.forEach((p) => {
+    this.products.forEach((p) => {
       this.container.append(this.buildProduct(p))
     })
   }

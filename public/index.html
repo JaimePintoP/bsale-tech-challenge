@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand">BSale Test</a>
         <form class="d-flex" id="search-form">
           <input
@@ -22,8 +22,38 @@
             type="search"
             placeholder="Buscar"
             aria-label="Buscar"
+            id="search-input"
+            autocomplete="off"
           />
+          <div class="d-none" id="search-filters">
+            <h3>Ordenar por:</h3>
+            <div class="form-check">
+              <input
+                class="form-check-input price-order"
+                type="radio"
+                name="order"
+                value="desc"
+              />
+              <label class="form-check-label"> Precio: mayor a menor </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input price-order"
+                type="radio"
+                name="order"
+                value="asc"
+              />
+              <label class="form-check-label"> Precio: menor a mayor </label>
+            </div>
+          </div>
           <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <button
+            class="btn btn-outline-primary ms-2"
+            type="button"
+            id="filters-toggle"
+          >
+            Filtros
+          </button>
         </form>
       </div>
     </nav>

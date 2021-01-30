@@ -6,6 +6,21 @@ body {
   padding: 20px;
 }
 
+#search-form {
+  position: relative;
+
+  #search-filters {
+    top: calc(100% + 0.5rem);
+    position: absolute;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 8px 4px;
+    z-index: 50;
+  }
+}
+
 .product-container {
   background-color: white;
   width: 240px;
