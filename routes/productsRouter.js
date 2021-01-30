@@ -1,5 +1,4 @@
 const express = require('express')
-const db = require('../db')
 const url = require('url')
 const Product = require('../models/Product')
 const { Op } = require('sequelize')
