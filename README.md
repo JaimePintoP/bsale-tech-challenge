@@ -24,3 +24,7 @@ Tech challenge for bsale application.
   ```
 
   which does a simple `node index.js`
+
+## Docs
+
+JSDoc documentation available here: https://subparry.github.io/bsale-tech-challenge/
