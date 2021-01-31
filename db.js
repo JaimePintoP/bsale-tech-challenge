@@ -2,6 +2,11 @@ const { Sequelize } = require('sequelize')
 
 /**
  * DB Class to manage DB connection
+ * Requires to have the followind env variables set:
+ * DB_NAME
+ * DB_USER
+ * DB_PASS
+ * DB_HOST
  */
 class DB {
   constructor() {
@@ -21,6 +26,7 @@ class DB {
 
   /**
    * Getter for DB client. Handles the case when connection is not ready yet
+   * by throwing an error.
    */
   get client() {
     if (!this.db) {
